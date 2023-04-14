@@ -1,0 +1,15 @@
+[submodule "cores/avr"]
+	path = cores/avr
+	url = https://github.com/arduino/ArduinoCore-avr.git
+[submodule "cores/esp8266"]
+	path = cores/esp8266
+	url = https://github.com/esp8266/Arduino.git
+[submodule "cores/esp32"]
+	path = cores/esp32
+	url = https://github.com/espressif/arduino-esp32.git
+[submodule "cores/megaavr"]
+	path = cores/megaavr
+	url = https://github.com/arduino/ArduinoCore-megaavr.git
+[submodule "cores/rp2040"]
+	path = cores/rp2040
+	url = https://github.com/earlephilhower/arduino-pico.git
