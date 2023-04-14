@@ -13,3 +13,9 @@
 [submodule "cores/rp2040"]
 	path = cores/rp2040
 	url = https://github.com/earlephilhower/arduino-pico.git
+[submodule "cores/samd"]
+	path = cores/samd
+	url = https://github.com/arduino/ArduinoCore-samd.git
+[submodule "cores/sam3x"]
+	path = cores/sam3x
+	url = https://github.com/arduino/ArduinoCore-sam
