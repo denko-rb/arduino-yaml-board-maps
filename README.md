@@ -4,13 +4,13 @@ The aim of this script is to map common identifiers used in the [Arduino](https:
 
 ### How to identify the board?
 
-Along with the maps inside the `yaml` folder, there is `BoardMap.cpp`. Include that in a sketch, and it will `#define BOARD_MAP`, based on your board selection in Arduino. The value of `BOARD_MAP` is the YAML filename for the board, minus the `.yml` extension.
+Along with the maps inside the `yaml` folder, there is `BoardMap.cpp`. Include that in a sketch, and it will `#define BOARD_MAP`, based on your board selection in Arduino. The value of `BOARD_MAP` is the filename for that board's map, minus the `.yml` extension.
 
 ### Why map the pins?
 
-Set up a function for the board to tell a remote machine its `BOARD_MAP` The remote machine loads it form the collection of maps, then uses the map to translate pin identifiers to integers, before sending instructions back to the board, or receiving messages from it.
+If the sketch tells a remote machine its `BOARD_MAP`, the map can be loaded from its file. From there, the remote machine uses it to translate between pin identifiers and integers, before sending instructions to the board, or receiving messages from it.
 
-This is the exact use case this was deisgned for, in support of the [dino](https://github.com/austinbv/dino) Ruby gem. It provides a more intuitive user interface for Ruby users, and simplifies the Arduino sketch, so it only has to deal with pins referred to as integers.
+This is the exact use case this was deisgned for, in support of the [dino](https://github.com/austinbv/dino) Ruby gem. It allows more intuitive pin referencing in Ruby, while simplifying the Arduino sketch so it only handles pins as integers.
 
 ## Supported Arduino Cores
 
@@ -32,7 +32,7 @@ This is the exact use case this was deisgned for, in support of the [dino](https
 - `MOSI`, `MISO`, `SCK`, `SS`, `MOSIX`, `MISOX`, `SCKX`, `SSX`, default and numbered hardware SPI pins
 - `LED_BUILTIN` which is usually defined for the on-board LED
 
-TODO: Add serial interfaces?
+TODO: Add UART and CAN?
 
 ## Usage
 
@@ -44,9 +44,7 @@ Each map is a flat dictionary where each key (an identifier) maps to one integer
 
 ## Development
 
-Be warned: This is mostly a hack that runs `boards.txt` and header files form the Arduino core repos through regexes.
-
-:man_shrugging:
+Be warned: This is mostly a hack that runs `boards.txt` and header files form the Arduino core repos through regexes. :man_shrugging:
 
 - Clone this repo.
 - Clone the submodules inside `core`. No need for recursion. Still close to 4GB.
