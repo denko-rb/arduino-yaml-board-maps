@@ -22,7 +22,7 @@ end
 
 # Remove chars from board identifier that won't work in a filename.
 def board_to_filename(board_identifier)
-  board_identifier.gsub(":", "_").gsub(/\AARDUINO_/, "")
+  board_identifier.gsub(":", "_").gsub(",", "_").gsub(/\AARDUINO_/, "")
 end
 
 # Define every board name in BoardMap.h
