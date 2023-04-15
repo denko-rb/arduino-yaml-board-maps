@@ -25,8 +25,8 @@ def board_to_filename(board_identifier)
   board_identifier.gsub(":", "_").gsub(/\AARDUINO_/, "")
 end
 
-# Define every board name in BoardMap.cpp
-File.open("#{Dir.pwd}/BoardMap.cpp", "w") do |file|
+# Define every board name in BoardMap.h
+File.open("#{Dir.pwd}/BoardMap.h", "w") do |file|
   board_maps.each_key do |board_identifier|
     file.write "#ifdef #{board_identifier}\n"
     file.write "  #define BOARD_MAP \"#{board_to_filename(board_identifier)}\"\n"

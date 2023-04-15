@@ -4,7 +4,7 @@ The aim of this script is to map common identifiers used in the [Arduino](https:
 
 ### How to identify the board?
 
-Along with the maps inside the `yaml` folder, there is `BoardMap.cpp`. Include that in a sketch, and it will `#define BOARD_MAP`, based on your board selection in Arduino. The value of `BOARD_MAP` is the filename for that board's map, minus the `.yml` extension.
+Along with the maps inside the `yaml` folder, there is `BoardMap.h`. Include that in a sketch, and it will `#define BOARD_MAP`, based on your board selection in Arduino. The value of `BOARD_MAP` is the filename for that board's map, minus the `.yml` extension.
 
 ### Why map the pins?
 
