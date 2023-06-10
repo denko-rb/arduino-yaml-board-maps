@@ -36,7 +36,7 @@ TODO: Add UART and CAN?
 
 ## Usage
 
-Clone or download this repo and use `BoardMap.ccpp` and all the files inside `yaml` as descibed above.
+Clone or download this repo. Use `BoardMap.h` and all the files inside `yaml` as descibed above.
 
 Each map is a flat dictionary where each key (an identifier) maps to one integer.
 
@@ -44,8 +44,8 @@ Each map is a flat dictionary where each key (an identifier) maps to one integer
 
 ## Development
 
-Be warned: This is mostly a hack that runs `boards.txt` and header files form the Arduino core repos through regexes. :man_shrugging:
+Be warned. This is mostly a hack that runs a bunch of regex matches on `boards.txt` and header files from each Arduino core. :man_shrugging:
 
 - Clone this repo.
-- Clone the submodules inside `core`. No need for recursion. Still close to 4GB.
-- `ruby run.rb` to udpate `BoardMap.cpp` and all the files inside `yaml`.
+- Clone the submodules inside the `core` folder with `git submodule init` and `git submodule update`. No need for recursion, but will still be close to 4GB.
+- Make changes and `ruby run.rb` to udpate `BoardMap.h` and all the YAML files.
