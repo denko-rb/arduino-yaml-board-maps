@@ -10,7 +10,7 @@ Along with the maps inside the `yaml` folder, there is `BoardMap.h`. Include tha
 
 If the sketch tells a remote machine its `BOARD_MAP`, the map can be loaded from its file. From there, the remote machine uses it to translate between pin identifiers and integers, before sending instructions to the board, or receiving messages from it.
 
-This is the exact use case this was deisgned for, in support of the [dino](https://github.com/austinbv/dino) Ruby gem. It allows more intuitive pin referencing in Ruby, while simplifying the Arduino sketch so it only handles pins as integers.
+This is the exact use case this was deisgned for, in support of the [denko](https://github.com/denko-rb/denko) Ruby gem. It allows more intuitive pin referencing in Ruby, while simplifying the Arduino sketch so it only handles pins as integers.
 
 ## Supported Arduino Cores
 
