@@ -1378,3 +1378,19 @@
   #define BOARD_MAP "SAMD_TIAN"
 #endif
 
+#ifdef ARDUINO_PORTENTA_C33
+  #define BOARD_MAP "PORTENTA_C33"
+#endif
+
+#ifdef ARDUINO_MINIMA
+  #define BOARD_MAP "MINIMA"
+#endif
+
+#ifdef ARDUINO_UNOWIFIR4
+  #define BOARD_MAP "UNOWIFIR4"
+#endif
+
+#ifdef ARDUINO_MUXTO
+  #define BOARD_MAP "MUXTO"
+#endif
+

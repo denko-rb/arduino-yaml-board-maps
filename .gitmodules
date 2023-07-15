@@ -19,3 +19,6 @@
 [submodule "cores/sam3x"]
 	path = cores/sam3x
 	url = https://github.com/arduino/ArduinoCore-sam
+[submodule "cores/ra4m1"]
+	path = cores/ra4m1
+	url = https://github.com/arduino/ArduinoCore-renesas.git

@@ -1,7 +1,7 @@
 require_relative "lib/boards_parser"
 require_relative "lib/header_parser"
 
-CORES = ["avr", "esp32", "esp8266", "megaavr", "rp2040", "sam3x", "samd"]
+CORES = ["avr", "esp32", "esp8266", "megaavr", "rp2040", "sam3x", "samd", "ra4m1"]
 
 # This will end up containing a map for each board identified. Each key
 # is a board's identifier and the value is its pin map as a hash.

@@ -1,0 +1,27 @@
+---
+:A0: 15
+:A1: 16
+:A2: 17
+:A3: 18
+:A4: 19
+:A5: 20
+:A6: 21
+:A7: 22
+:DAC1: 20
+:LED_BUILTIN: 35
+:SDA: 11
+:SCL: 12
+:SDA1: 37
+:SCL1: 38
+:SDA2: 39
+:SCL2: 40
+:SDA3: 96
+:SCL3: 97
+:MOSI: 8
+:MISO: 10
+:SCK: 9
+:CS: 7
+:MOSI1: 46
+:MISO1: 45
+:SCK1: 47
+:CS1: 48

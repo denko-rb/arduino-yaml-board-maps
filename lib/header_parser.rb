@@ -27,6 +27,9 @@ class HeaderParser
     file.each_line do |line|
       # Reject comments.
       next if line.match /\A\/\//
+      
+      # Reject anything to do with QSPI.
+      next if line.match /QSPI/
 
       # Reject lines that end with pin-style identifiers, instead of numbers.
       next if line.match /(PIN_)*(A|D|DAC|T)(\d+)\s*;*\s*\z/
@@ -57,6 +60,17 @@ class HeaderParser
       pin = line.match /(PIN_)*((A|DAC)\d+)\s*\(?(\d+)\w*\)?/
       if pin
         @map[pin[2].to_sym] = pin[4].to_i
+        next
+      end
+      
+      #
+      # Match I2C/SPI pins declared like: (first seen in UNO R4)
+      #     #define WIRE_SDA_PIN 20
+      #     #define WIRE_SCL1_PIN 20
+      #
+      pin = line.match /(WIRE(\d*)_(SCL_|SDA_)PIN)\s*\(?(\d+)\w*\)?/
+      if pin
+        @map[pin[1].gsub("_PIN", "").to_sym] = pin[4].to_i
         next
       end
 
