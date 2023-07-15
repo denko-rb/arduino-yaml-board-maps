@@ -1390,7 +1390,3 @@
   #define BOARD_MAP "UNOWIFIR4"
 #endif
 
-#ifdef ARDUINO_MUXTO
-  #define BOARD_MAP "MUXTO"
-#endif
-

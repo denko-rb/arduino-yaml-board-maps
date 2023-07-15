@@ -15,10 +15,20 @@ CORES.each do |core|
 
   # For each board, parse its header and add it to the hash of maps.
   board_headers.each do |board, header_folder|
+    # No idea what this is, but doesn't seem to be a real board.
+    next if board.match /muxto/i
+    
     parser = HeaderParser.new(header_folder)
     board_maps[board] = parser.map
   end
 end
+
+# Manually set DAC pins for Arduino branded RA4M1 boards.
+# Should handle with different matchers for each core, but this works for now.
+board_maps["ARDUINO_MINIMA"][:DAC] = 14
+board_maps["ARDUINO_UNOWIFIR4"][:DAC] = 14
+board_maps["ARDUINO_PORTENTA_C33"][:DAC] = 21
+board_maps["ARDUINO_PORTENTA_C33"][:DAC1] = 20
 
 # Remove chars from board identifier that won't work in a filename.
 def board_to_filename(board_identifier)

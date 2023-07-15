@@ -51,15 +51,25 @@ class HeaderParser
       end
 
       #
-      # Match analog input and DAC pins declared like:
+      # Match analog input pins declared like:
       #     #define PIN_A0 (14ul)
-      #     #define PIN_DAC0 (14)
       #     #define PIN_A0 14
       #     #define A0 14
       #
-      pin = line.match /(PIN_)*((A|DAC)\d+)\s*\(?(\d+)\w*\)?/
+      pin = line.match /(PIN_)*(A\d+)\s*\(?(\d+)\w*\)?/
       if pin
-        @map[pin[2].to_sym] = pin[4].to_i
+        @map[pin[2].to_sym] = pin[3].to_i
+        next
+      end
+      
+      #
+      # Strict matcher for DAC pins in Arduino SAMD core:
+      #     #define DAC  A0
+      #     #define DAC1 14
+      #
+      pin = line.match /(PIN_)(DAC\d+)\s*\(?(\d+)\w*\)?/
+      if pin
+        @map[pin[2].to_sym] = pin[3].to_i
         next
       end
       

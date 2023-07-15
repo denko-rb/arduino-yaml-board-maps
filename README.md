@@ -18,6 +18,7 @@ This is the exact use case this was deisgned for, in support of the [denko](http
 - [megaavr](https://github.com/arduino/ArduinoCore-megaavr)
 - [sam](https://github.com/arduino/ArduinoCore-sam)
 - [samd](https://github.com/arduino/ArduinoCore-samd)
+- [renesas](https://github.com/arduino/ArduinoCore-renesas)
 - [esp8266](https://github.com/esp8266/Arduino)
 - [esp32](https://github.com/espressif/arduino-esp32)
 - [rp2040](https://github.com/earlephilhower/arduino-pico)
