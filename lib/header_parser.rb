@@ -44,7 +44,7 @@ class HeaderParser
 
       # Match RP2040 analog overrides and store them with prefixed keys like :_A0
       # Will substitute them later in #clean_map
-      rp2040_analog = line.match /__PIN(_A\d+)\s*\(?(\d+)\w*\)?/
+      rp2040_analog = line.match /__PIN(_A\d+)\s+\(?(\d+)\w*\)?/
       if rp2040_analog
         @map[rp2040_analog[1].to_sym] = rp2040_analog[2].to_i
         next
@@ -56,7 +56,7 @@ class HeaderParser
       #     #define PIN_A0 14
       #     #define A0 14
       #
-      pin = line.match /(PIN_)*(A\d+)\s*\(?(\d+)\w*\)?/
+      pin = line.match /(PIN_)*(A\d+)\s+\(?(\d+)\w*\)?/
       if pin
         @map[pin[2].to_sym] = pin[3].to_i
         next
@@ -67,7 +67,7 @@ class HeaderParser
       #     #define DAC  A0
       #     #define DAC1 14
       #
-      pin = line.match /(PIN_)(DAC\d+)\s*\(?(\d+)\w*\)?/
+      pin = line.match /(PIN_)(DAC\d+)\s+\(?(\d+)\w*\)?/
       if pin
         @map[pin[2].to_sym] = pin[3].to_i
         next
@@ -97,6 +97,7 @@ class HeaderParser
         next
       end
 
+      # This mostly affectes SAM3X, ESP32 and ESP8266.
       #
       # Match custom labeled D* pins (eg. ESP8266) declared like: 
       #     static const uint D4 = (2)

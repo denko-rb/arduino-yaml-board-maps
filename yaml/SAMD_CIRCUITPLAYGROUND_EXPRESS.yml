@@ -1,7 +1,6 @@
 ---
 :LED_BUILTIN: 13
 :A0: 14
-:A1: 0
 :SS: 33
 :MISO: 30
 :SCK: 31
