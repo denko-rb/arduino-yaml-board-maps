@@ -1,4 +1,8 @@
 ---
 :D2: 2
+:SS: 7
+:MOSI: 6
+:MISO: 5
+:SCK: 4
 :SDA: 13
 :SCL: 15
