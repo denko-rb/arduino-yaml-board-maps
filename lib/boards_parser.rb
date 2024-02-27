@@ -29,7 +29,7 @@ class BoardsParser
     File.readlines("#{core_root_path}/boards.txt").each do |line|
       # Lines matching this define a board or board sub-model.
       match = line.match(/build.board=(.*)\s*\z/)
-      if match
+      if match && !line.include?("DudesCab")
         board_identifier = "ARDUINO_#{match[1]}"
 
         # If there's a board and header set, add it to the hash.
@@ -42,7 +42,7 @@ class BoardsParser
 
       # Lines matching this give the folder name for the board's header file.
       match = line.match(/build.variant=(.*)\s*\z/)
-      if match
+      if match && !line.include?("DudesCab")
         header_folder = "#{core_root_path}/variants/#{match[1]}"
 
         # If there's a board and header set, add it to the hash.
