@@ -135,7 +135,7 @@ class HeaderParser
       #
       led = line.match /(PIN_LED|LED_BUILTIN)(_13)*\s+\(?(\d+)\w*\)?/
       if led
-        @map[:LED_BUILTIN] = led[3].to_i unless line.match /2812/
+        @map[:LED_BUILTIN] = led[3].to_i
         next
       end
 
@@ -147,7 +147,17 @@ class HeaderParser
       #
       led = line.match /(PIN_LED|LED_BUILTIN)(_13)*\s*=\s*\(?(\d+)\w*\)?/
       if led
-        @map[:LED_BUILTIN] = led[3].to_i unless line.match /2812/
+        @map[:LED_BUILTIN] = led[3].to_i
+        next
+      end
+      
+      #
+      # Match PIN_NEOPIXEL declared like:
+      #     #define PIN_NEOPIXEL 8
+      #
+      neopixel = line.match /(#define PIN_NEOPIXEL)\s+\(?(\d+)\w*\)?/
+      if neopixel
+        @map[:LED_BUILTIN] = neopixel[2].to_i unless @map[:LED_BUILTIN]
         next
       end
     end
