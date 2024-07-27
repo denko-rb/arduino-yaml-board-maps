@@ -1,0 +1,9 @@
+---
+:SDA: 32
+:SCL: 33
+:SS: 5
+:MOSI: 15
+:MISO: 36
+:SCK: 13
+:DAC1: 25
+:DAC2: 26

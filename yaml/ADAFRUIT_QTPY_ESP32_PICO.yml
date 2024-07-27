@@ -1,4 +1,5 @@
 ---
+:LED_BUILTIN: 5
 :SDA: 4
 :SCL: 33
 :A1: 25

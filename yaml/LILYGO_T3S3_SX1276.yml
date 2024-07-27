@@ -1,0 +1,9 @@
+---
+:LED_BUILTIN: 37
+:SDA: 18
+:SCL: 17
+:A1: 10
+:SS: 13
+:MOSI: 11
+:MISO: 2
+:SCK: 14

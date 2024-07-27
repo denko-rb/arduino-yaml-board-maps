@@ -1,6 +1,6 @@
 ---
-:SDA: 33
-:SCL: 34
+:SCL: 33
+:SDA: 34
 :SS: 48
 :MOSI: 35
 :SCK: 36
