@@ -5,6 +5,7 @@
 :MOSI: 11
 :MISO: 13
 :SCK: 12
+:LED_BUILTIN: 5
 :A0: 1
 :A1: 2
 :A2: 3

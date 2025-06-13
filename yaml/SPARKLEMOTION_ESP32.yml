@@ -1,0 +1,12 @@
+---
+:LED_BUILTIN: 4
+:SDA: 14
+:SCL: 13
+:SS: 23
+:MOSI: 9
+:MISO: 10
+:SCK: 18
+:A0: 27
+:T0: 27
+:DAC1: 25
+:DAC2: 26

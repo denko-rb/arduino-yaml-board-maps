@@ -1,5 +1,4 @@
 ---
-:LED_BUILTIN: 8
 :SDA: 12
 :SCL: 22
 :SS: 0

@@ -1,11 +1,10 @@
 ---
-:LED_BUILTIN: 8
-:SDA: 23
+:SDA: 21
 :SCL: 22
 :SS: 18
-:MOSI: 19
+:MOSI: 23
 :MISO: 20
-:SCK: 21
+:SCK: 19
 :A0: 0
 :A1: 1
 :A2: 2

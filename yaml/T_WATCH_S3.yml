@@ -1,0 +1,7 @@
+---
+:SDA: 10
+:SCL: 11
+:SS: 5
+:MOSI: 1
+:MISO: 4
+:SCK: 3
