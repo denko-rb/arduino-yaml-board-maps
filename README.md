@@ -48,5 +48,6 @@ Each map is a flat dictionary where each key (an identifier) maps to one integer
 Be warned. This is mostly a hack that runs a bunch of regex matches on `boards.txt` and header files from each Arduino core. :man_shrugging:
 
 - Clone this repo.
-- Clone the submodules inside the `core` folder with `git submodule init` and `git submodule update`. No need for recursion, but will still be close to 4GB.
+- Get the Arduino cores by running `ruby get_cores.rb`. Avoided submodules here since these can be large, and that affects `git clone --recursive`.
+- Update the commits of relevant cores in `get_cores.rb` as needed.
 - Make changes and `ruby run.rb` to udpate `BoardMap.h` and all the YAML files.
